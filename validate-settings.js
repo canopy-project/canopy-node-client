@@ -3,71 +3,39 @@
 module.exports = function(settings){
     if (settings["auth-username"] && settings["auth-device-id"]) {
         throw new Error('Please choose either auth-username or auth-device-id, not both, thanks.');
-      }
-      if (settings["auth-username"]) {
+    }
+    if (settings["auth-username"]) {
         if (!typeCheck('String', settings["auth-username"])) {
-          throw new Error('Expected string for auth-username');
+            throw new Error('Expected string for auth-username');
         };
         if (!typeCheck('String', settings["auth-password"])) {
-          throw new Error('Expected string for auth-password');
+            throw new Error('Expected string for auth-password');
         };
-      } else if (settings["auth-device-id"]) {  
+    } else if (settings["auth-device-id"]) {  
         if (!typeCheck('String', settings["auth-device-id"])) {
-          throw new Error('Expected string for auth-device-id');
+            throw new Error('Expected string for auth-device-id');
         };
         if (!typeCheck('String', settings["auth-device-secret"])) {
-          throw new Error('Expected string for auth-device-secret');
+            throw new Error('Expected string for auth-device-secret');
         };  
-      } else {
+    } else {
         throw new Error('Must provide either auth-username or auth-device-id');
-      }
-      if (settings["auth-type"] !== "basic") {
+    }
+    if (settings["auth-type"] !== "basic") {
         throw new Error('Expected string "basic" for auth-type');
-      };  
-      if (!typeCheck('String', settings["server"])) {
+    };  
+    if (!typeCheck('String', settings["server"])) {
         throw new Error('Expected string for server');
-      
-      if (!typeCheck('Number', settings["http-port"])) {
-        throw new Error('Expected number for http-port');
-      };
-      if (!typeCheck('Number', settings["https-port"])) {
-        throw new Error('Expected number for https-port');
-      };
+
+        if (!typeCheck('Number', settings["http-port"])) {
+            throw new Error('Expected number for http-port');
+        };
+        if (!typeCheck('Number', settings["https-port"])) {
+            throw new Error('Expected number for https-port');
+        };
 
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // /*var typeCheck = require('type-check');

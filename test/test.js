@@ -10,22 +10,20 @@ var canopy = require('../canopy');
 
 suite("init", function(){
 
-	var humanClient = {
-			"auth-username": 'banana',
-			"auth-password": 'tacos'
-		}
+    var humanClient = {
+        "auth-username": 'banana',
+        "auth-password": 'tacos'
+    }
 
-	test("Initialize Client with empty settings should fail", function(){
-	  	expect(function() {
-	  		canopy.initClient({});
-	  	}).to.throw(Error);
-	});
-	test("Initialize Client with humanClient settings should not fail", function(){
-	  	expect( function() {
-	  		canopy.initClient(
-	  			humanClient
-			);
-	  	}).to.not.throw(Error);
-	
-	});
+    test("Initialize Client with empty settings should fail", function(){
+        expect(function() {
+            canopy.initClient({});
+        }).to.throw(Error);
+    });
+
+    test("Initialize Client with humanClient settings should not fail", function(){
+        expect( function() {
+            canopy.initClient(humanClient);
+        }).to.not.throw(Error);
+    });
 });

@@ -2,7 +2,6 @@ var canopy = require('./canopy');
 var client = require('./client');
 
 canopy.initClient({
-			"auth-username": 'banana',
-			"auth-password": 'tacos'
-		});
-
+    "auth-username": 'banana',
+    "auth-password": 'tacos'
+});
