@@ -1,4 +1,5 @@
 // expose Device
+var util = require('canopy-util');
 var Device = function () {
 
     // get historical cloud data for time series 'get time series' or 'get
@@ -91,4 +92,4 @@ var Device = function () {
     }
 }
 
-module.exports = new Device();
+module.exports = Device;

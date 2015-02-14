@@ -46,7 +46,6 @@ var req = function(params){
     req.on('error', function(e) {
         params.onDone(e, null);
     });
-
     if(params.payload){
         req.write(payloadString);
     }
