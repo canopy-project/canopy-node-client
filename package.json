@@ -1,6 +1,6 @@
 {
   "name": "canopy-node-client",
-  "version": "0.0.41",
+  "version": "0.0.44",
   "description": "Node.js Client for Canopy IoT Cloud Platform",
   "main": "canopy.js",
   "scripts": {
